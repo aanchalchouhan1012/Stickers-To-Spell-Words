@@ -1,0 +1,297 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  color: #111827;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+.app {
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  margin: 0 0 10px;
+  font-size: 38px;
+  font-weight: 800;
+  color: #111827;
+}
+
+.header p {
+  margin: 0;
+  color: #475569;
+  font-size: 16px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  border: 1px solid #e2e8f0;
+  color: #111827;
+}
+
+.card h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #111827;
+}
+
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #334155;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #94a3b8;
+  border-radius: 9px;
+  background: #ffffff;
+  color: #111827;
+  outline: none;
+  font-size: 15px;
+  transition: 0.2s;
+}
+
+.input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+.input::placeholder {
+  color: #64748b;
+  opacity: 1;
+}
+
+.target-input {
+  font-size: 17px;
+  padding: 14px;
+  font-weight: 600;
+}
+
+.small-input {
+  max-width: 120px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.section-header h2 {
+  margin: 0;
+}
+
+.sticker-row {
+  display: grid;
+  grid-template-columns: 1fr 120px 120px 45px;
+  gap: 10px;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.secondary-btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #eef2ff;
+  color: #4338ca;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.secondary-btn:hover {
+  background: #e0e7ff;
+  color: #312e81;
+}
+
+.delete-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 8px;
+  background: #fee2e2;
+  color: #b91c1c;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.delete-btn:hover {
+  background: #fecaca;
+}
+
+.solve-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.25);
+  transition: 0.2s;
+}
+
+.solve-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(79, 70, 229, 0.32);
+}
+
+.limit-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #e2e8f0;
+  color: #334155;
+  font-weight: 600;
+}
+
+.limit-row:last-child {
+  border-bottom: none;
+}
+
+.result {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.result strong {
+  font-size: 20px;
+}
+
+.result p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+.result-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 22px;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.success {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+.success .result-icon {
+  background: #22c55e;
+  color: #ffffff;
+}
+
+.error {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+.error .result-icon {
+  background: #ef4444;
+  color: #ffffff;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #111827;
+  -webkit-box-shadow: 0 0 0 1000px #ffffff inset;
+}
+
+@media (max-width: 650px) {
+  .app {
+    padding: 20px 12px;
+  }
+
+  .header h1 {
+    font-size: 30px;
+  }
+
+  .header p {
+    font-size: 14px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .sticker-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sticker-row .input:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .small-input {
+    max-width: none;
+  }
+
+  .delete-btn {
+    width: 100%;
+  }
+
+  .section-header {
+    align-items: flex-start;
+    gap: 10px;
+    flex-direction: column;
+  }
+
+  .secondary-btn {
+    width: 100%;
+  }
+
+  .result {
+    padding: 16px;
+  }
+
+  .result strong {
+    font-size: 17px;
+  }
+}
